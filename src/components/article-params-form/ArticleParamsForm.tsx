@@ -34,7 +34,7 @@ export const ArticleParamsForm = ({
   //  состояние открытия и закрытия сайдбара
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const sideBarRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLDivElement>(null);
 
   // локальные состояния формы - буфер настроек
 
@@ -55,7 +55,7 @@ export const ArticleParamsForm = ({
     if (!isOpen) return;
 
     const handleOutsideClick = (event: MouseEvent): void => {
-      if (sideBarRef.current && !sideBarRef.current.contains(event.target as Node)) {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     };
@@ -97,7 +97,7 @@ export const ArticleParamsForm = ({
         className={clsx(styles.container, {
           [styles.container_open]: isOpen,
         })}
-        ref={sideBarRef}
+        ref={sidebarRef}
       >
         <form className={styles.form} onSubmit={handleSubmit} onReset={handleReset}>
           <Text as="h2" size={31} weight={800} uppercase={true}>
