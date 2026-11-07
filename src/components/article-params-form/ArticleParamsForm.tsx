@@ -34,7 +34,7 @@ export const ArticleParamsForm = ({
   //  состояние открытия и закрытия сайдбара
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const sidebarRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLElement>(null);
 
   // локальные состояния формы - буфер настроек
 
